@@ -12,9 +12,9 @@
   body {
     @apply min-h-screen bg-crisis-bg font-sans text-crisis-text antialiased;
     background-image:
-      radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 26%),
-      radial-gradient(circle at top right, rgba(198, 40, 40, 0.10), transparent 24%),
-      linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
+      radial-gradient(circle at top left, rgba(197, 108, 99, 0.16), transparent 24%),
+      radial-gradient(circle at top right, rgba(127, 167, 214, 0.12), transparent 26%),
+      linear-gradient(180deg, #07101d 0%, #0a1424 100%);
   }
 
   #root {
@@ -24,30 +24,73 @@
 
 @layer components {
   .panel {
-    @apply rounded-3xl border border-white/70 bg-white/90 shadow-panel backdrop-blur-sm;
+    @apply rounded-3xl border border-white/10 shadow-panel backdrop-blur-sm;
+    background-color: rgba(16, 26, 42, 0.88);
   }
 
   .panel-dark {
-    @apply rounded-3xl border border-white/10 bg-slate-950/90 text-white shadow-panel backdrop-blur-sm;
+    @apply rounded-3xl border border-white/10 bg-slate-950/95 text-white shadow-panel backdrop-blur-sm;
   }
 
   .section-title {
-    @apply font-display text-lg font-semibold tracking-tight text-ink;
+    @apply font-display text-lg font-semibold tracking-tight text-white;
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.22em] text-slate-500;
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-slate-400;
   }
 
   .metric-value {
-    @apply font-display text-3xl font-semibold tracking-tight text-ink;
+    @apply font-display text-3xl font-semibold tracking-tight text-white;
   }
 
   .subtle-grid {
     background-size: 22px 22px;
     background-image:
-      linear-gradient(rgba(148,163,184,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(148,163,184,0.07) 1px, transparent 1px);
+      linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+  }
+}
+
+@layer utilities {
+  .theme-dark .bg-slate-50,
+  .theme-dark .bg-white,
+  .theme-dark .bg-slate-100 {
+    background-color: rgba(17, 27, 43, 0.92);
+  }
+
+  .theme-dark .bg-red-50 {
+    background-color: rgba(48, 25, 24, 0.92);
+  }
+
+  .theme-dark .border-slate-200,
+  .theme-dark .border-red-100,
+  .theme-dark .border-amber-100,
+  .theme-dark .border-blue-100 {
+    border-color: rgba(148, 163, 184, 0.16);
+  }
+
+  .theme-dark .text-ink,
+  .theme-dark .text-slate-900 {
+    color: #f8fafc;
+  }
+
+  .theme-dark .text-slate-500,
+  .theme-dark .text-slate-600,
+  .theme-dark .text-slate-700 {
+    color: #a8b4c5;
+  }
+
+  .theme-dark .text-slate-400 {
+    color: #8fa0b6;
+  }
+
+  .theme-dark .bg-white\/80 {
+    background-color: rgba(15, 23, 36, 0.9);
+  }
+
+  .theme-dark .shadow-sm {
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.18);
   }
 }
 
@@ -57,10 +100,10 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(226, 232, 240, 0.7);
+  background: rgba(15, 23, 42, 0.8);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(100, 116, 139, 0.45);
+  background: rgba(197, 108, 99, 0.42);
   border-radius: 999px;
 }

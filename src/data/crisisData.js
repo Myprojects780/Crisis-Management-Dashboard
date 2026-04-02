@@ -1,233 +1,288 @@
 import {
-  AlertTriangle,
-  BadgeAlert,
+  BadgeDollarSign,
+  BriefcaseBusiness,
   Building2,
-  CircleDashed,
-  Flag,
+  CircleDollarSign,
   Globe2,
-  HandCoins,
-  MessagesSquare,
-  RadioTower,
-  ShieldAlert,
+  Handshake,
+  Landmark,
+  MessageSquareMore,
+  Newspaper,
+  TrendingUp,
   Users,
 } from 'lucide-react'
 
-// Replace this file with case-specific content later.
-// Keeping labels and mock series centralized makes competition customization fast.
+// Centralized mock data so teams can quickly adapt this dashboard to a specific case.
+// Swap labels, scores, and narrative details here without restructuring the UI.
 export const dashboardMeta = {
-  brandName: 'Northstar Foods',
-  crisisTitle: 'Contaminated Batch Recall and Misinformation Escalation',
-  severity: 'Critical',
-  statusLine: 'Response Underway - Cross-Functional War Room Active',
+  brandName: 'State of Texas',
+  crisisTitle: 'Texas Migration & Economic Command Center',
+  severity: 'Growing',
+  statusLine: 'Statewide recruitment and sentiment stewardship active',
+  currentSentiment: 'Cautiously Positive',
+  netInflow: '+18.4K monthly inflow',
   lastUpdated: '02 Apr 2026 - 18:40 IST',
-  crisisPhase: 'Containment',
+  operatingMode: 'Economic Positioning and Social Harmony',
   decisionNote:
-    'Leadership should prioritize reassurance for affected customers while limiting narrative drift across media and social channels.',
+    'Leadership should sustain the Texas Advantage narrative while pairing it with visible local reassurance on affordability, infrastructure, and community identity.',
   assumptionNote:
-    'Mock data simulates 72 hours from initial detection through early stabilization after corrective action and official statements.',
-  dataSourceNote: 'Mock monitoring feeds: social listening, support queues, media scans, regional ops reports.',
+    'Mock data models a 6-month period of elevated inbound migration from California, including business relocations, HNI interest, and localized resident pushback.',
+  dataSourceNote:
+    'Mock inputs: relocation inquiries, media monitoring, community sentiment panels, city-level housing pressure estimates, campaign analytics.',
 }
 
 export const filterOptions = {
-  timeRanges: ['24H', '48H', '72H', '7D'],
-  regions: ['All Markets', 'North America', 'Europe', 'South Asia', 'Middle East'],
-  channels: ['All Channels', 'Social', 'News', 'Support', 'Internal'],
-  stakeholders: ['All Stakeholders', 'Customers', 'Employees', 'Investors', 'Regulators'],
+  timeRanges: ['1M', '3M', '6M', '12M'],
+  regions: ['Statewide', 'Austin', 'Dallas', 'Houston', 'San Antonio'],
+  stakeholders: ['All Stakeholders', 'Local residents', 'Migrating businesses', 'HNIs', 'State government', 'Media', 'Real estate sector'],
 }
 
 export const kpis = [
-  { label: 'Crisis Severity Score', value: 82, suffix: '/100', delta: '+11', trend: 'up', tone: 'red', icon: BadgeAlert },
-  { label: 'Negative Sentiment', value: 64, suffix: '%', delta: '-6', trend: 'down', tone: 'amber', icon: MessagesSquare },
-  { label: 'Avg Ack Time', value: 41, suffix: ' min', delta: '-12', trend: 'down', tone: 'blue', icon: RadioTower },
-  { label: 'Media & Social Spike', value: 3.4, suffix: 'x', delta: '+0.8', trend: 'up', tone: 'red', icon: Globe2 },
-  { label: 'Stakeholders Impacted', value: 6, suffix: '/7', delta: '+1', trend: 'up', tone: 'amber', icon: Users },
-  { label: 'Resolution Progress', value: 58, suffix: '%', delta: '+14', trend: 'up', tone: 'green', icon: CircleDashed },
-  { label: 'Trust Score', value: 46, suffix: '/100', delta: '+4', trend: 'up', tone: 'blue', icon: ShieldAlert },
-  { label: 'Escalation Level', value: 'L4', suffix: '', delta: 'Executive', trend: 'flat', tone: 'red', icon: Flag },
+  {
+    label: 'Net Migration',
+    value: 18.4,
+    suffix: 'K',
+    delta: '+12% vs last month',
+    deltaLabel: 'Accelerating',
+    trend: 'up',
+    deltaTone: 'green',
+    tone: 'blue',
+    icon: TrendingUp,
+  },
+  {
+    label: 'Business Relocations',
+    value: 46,
+    suffix: '',
+    delta: '+8 this month',
+    deltaLabel: 'On Target',
+    trend: 'up',
+    deltaTone: 'green',
+    tone: 'green',
+    icon: BriefcaseBusiness,
+  },
+  {
+    label: 'HNI Inflow Index',
+    value: 73,
+    suffix: '/100',
+    delta: '+5 points',
+    deltaLabel: 'Strengthening',
+    trend: 'up',
+    deltaTone: 'green',
+    tone: 'blue',
+    icon: BadgeDollarSign,
+  },
+  {
+    label: 'Cost Advantage vs California',
+    value: 29,
+    suffix: '%',
+    delta: 'Stable gap',
+    deltaLabel: 'Competitive',
+    trend: 'flat',
+    deltaTone: 'blue',
+    tone: 'green',
+    icon: CircleDollarSign,
+  },
+  {
+    label: 'Sentiment Score',
+    value: 58,
+    suffix: '/100',
+    delta: '-3 local softness',
+    deltaLabel: 'Needs Watch',
+    trend: 'down',
+    deltaTone: 'amber',
+    tone: 'amber',
+    icon: MessageSquareMore,
+  },
+  {
+    label: 'Brand Perception Score',
+    value: 76,
+    suffix: '/100',
+    delta: '+4 points',
+    deltaLabel: 'Improving',
+    trend: 'up',
+    deltaTone: 'green',
+    tone: 'blue',
+    icon: Globe2,
+  },
+  {
+    label: 'Housing Pressure Index',
+    value: 67,
+    suffix: '/100',
+    delta: '+6 in Austin',
+    deltaLabel: 'Monitor',
+    trend: 'up',
+    deltaTone: 'amber',
+    tone: 'amber',
+    icon: Building2,
+  },
+  {
+    label: 'Policy Confidence Index',
+    value: 71,
+    suffix: '/100',
+    delta: '+2 points',
+    deltaLabel: 'Steady',
+    trend: 'up',
+    deltaTone: 'blue',
+    tone: 'blue',
+    icon: Landmark,
+  },
 ]
 
 export const timeline = [
-  { time: '06:10', title: 'Issue detected', detail: 'QA flags contamination anomaly in two production lots.', tone: 'blue' },
-  { time: '09:20', title: 'First viral post', detail: 'Customer video drives rapid amplification across X and Reddit.', tone: 'amber' },
-  { time: '11:05', title: 'Press pickup', detail: 'Regional outlets link recall to broader safety concerns.', tone: 'red' },
-  { time: '13:30', title: 'Holding statement', detail: 'Brand acknowledges issue, announces investigation and hotline.', tone: 'blue' },
-  { time: '18:10', title: 'Corrective action', detail: 'Recall notice, refund process, and retail pull-through activated.', tone: 'green' },
-  { time: '29:40', title: 'Recovery signals', detail: 'Negative velocity slows after FAQ rollout and spokesperson briefing.', tone: 'green' },
+  { time: 'Jan', title: 'Corporate relocation wave', detail: 'Two mid-market firms and one logistics HQ announce moves to Dallas and Austin.', tone: 'blue' },
+  { time: 'Feb', title: 'Texas Advantage push', detail: 'State launches coordinated economic storytelling on tax, talent, and expansion speed.', tone: 'green' },
+  { time: 'Mar', title: 'Housing affordability narrative', detail: 'Local commentary rises around rent pressure and neighborhood displacement concerns.', tone: 'amber' },
+  { time: 'Apr', title: 'Policy reassurance package', detail: 'Officials pair migration messaging with infrastructure, zoning, and workforce commitments.', tone: 'blue' },
+  { time: 'May', title: 'Media coverage spike', detail: 'National outlets frame Texas as both a magnet for capital and a stress test for local capacity.', tone: 'amber' },
+  { time: 'Jun', title: 'Sentiment stabilization', detail: 'Resident acceptance improves where outreach and housing mitigation messages are localized.', tone: 'green' },
 ]
 
-const baseSentiment = [
-  { point: '0h', positive: 22, neutral: 48, negative: 30, mentions: 380 },
-  { point: '6h', positive: 18, neutral: 34, negative: 48, mentions: 810 },
-  { point: '12h', positive: 14, neutral: 29, negative: 57, mentions: 1420 },
-  { point: '18h', positive: 13, neutral: 24, negative: 63, mentions: 1880 },
-  { point: '24h', positive: 16, neutral: 27, negative: 57, mentions: 1670 },
-  { point: '30h', positive: 18, neutral: 31, negative: 51, mentions: 1390 },
-  { point: '36h', positive: 21, neutral: 35, negative: 44, mentions: 1180 },
-  { point: '42h', positive: 23, neutral: 37, negative: 40, mentions: 990 },
-  { point: '48h', positive: 24, neutral: 39, negative: 37, mentions: 870 },
-  { point: '54h', positive: 26, neutral: 42, negative: 32, mentions: 740 },
-  { point: '60h', positive: 28, neutral: 43, negative: 29, mentions: 630 },
-  { point: '72h', positive: 31, neutral: 44, negative: 25, mentions: 520 },
+const statewideTrend = [
+  { point: 'Jan', localAcceptance: 49, localResistance: 32, housingConcern: 44, cultureConcern: 27, migrantOptimism: 71, migrantConcern: 24, businessInterest: 58 },
+  { point: 'Feb', localAcceptance: 50, localResistance: 35, housingConcern: 47, cultureConcern: 28, migrantOptimism: 75, migrantConcern: 23, businessInterest: 64 },
+  { point: 'Mar', localAcceptance: 47, localResistance: 39, housingConcern: 54, cultureConcern: 31, migrantOptimism: 76, migrantConcern: 27, businessInterest: 68 },
+  { point: 'Apr', localAcceptance: 52, localResistance: 36, housingConcern: 49, cultureConcern: 29, migrantOptimism: 79, migrantConcern: 24, businessInterest: 72 },
+  { point: 'May', localAcceptance: 55, localResistance: 34, housingConcern: 46, cultureConcern: 28, migrantOptimism: 82, migrantConcern: 21, businessInterest: 78 },
+  { point: 'Jun', localAcceptance: 58, localResistance: 30, housingConcern: 43, cultureConcern: 25, migrantOptimism: 84, migrantConcern: 19, businessInterest: 81 },
 ]
 
-const regionMultipliers = {
-  'All Markets': 1,
-  'North America': 1.15,
-  Europe: 0.84,
-  'South Asia': 1.08,
-  'Middle East': 0.72,
+const cityAdjustments = {
+  Statewide: { localAcceptance: 0, localResistance: 0, housingConcern: 0, cultureConcern: 0, migrantOptimism: 0, migrantConcern: 0, businessInterest: 0 },
+  Austin: { localAcceptance: -3, localResistance: 5, housingConcern: 9, cultureConcern: 4, migrantOptimism: 2, migrantConcern: 4, businessInterest: 6 },
+  Dallas: { localAcceptance: 2, localResistance: -2, housingConcern: 1, cultureConcern: 0, migrantOptimism: 3, migrantConcern: -1, businessInterest: 5 },
+  Houston: { localAcceptance: 1, localResistance: -1, housingConcern: 0, cultureConcern: -1, migrantOptimism: 2, migrantConcern: 0, businessInterest: 4 },
+  'San Antonio': { localAcceptance: -1, localResistance: 2, housingConcern: 3, cultureConcern: 2, migrantOptimism: 1, migrantConcern: 1, businessInterest: 2 },
 }
 
-const channelMentions = {
-  'All Channels': [1, 1, 1, 1, 1, 1, 1],
-  Social: [1.18, 1.12, 0.86, 0.58, 0.63, 1.23, 0.7],
-  News: [0.44, 0.38, 0.52, 1.25, 0.22, 0.35, 0.18],
-  Support: [0.22, 0.18, 0.12, 0.16, 1.35, 0.08, 0.32],
-  Internal: [0.16, 0.1, 0.24, 0.08, 0.14, 0.05, 1.48],
-}
+export const getSentimentTrend = ({ timeRange = '6M', region = 'Statewide' } = {}) => {
+  const limit = timeRange === '1M' ? 2 : timeRange === '3M' ? 4 : statewideTrend.length
+  const adjustment = cityAdjustments[region] ?? cityAdjustments.Statewide
 
-export const getSentimentTrend = ({ timeRange = '72H', region = 'All Markets' } = {}) => {
-  const limit = timeRange === '24H' ? 5 : timeRange === '48H' ? 9 : 12
-  const multiplier = regionMultipliers[region] ?? 1
-
-  return baseSentiment.slice(0, limit).map((item) => ({
+  return statewideTrend.slice(-limit).map((item) => ({
     ...item,
-    mentions: Math.round(item.mentions * multiplier),
+    localAcceptance: item.localAcceptance + adjustment.localAcceptance,
+    localResistance: item.localResistance + adjustment.localResistance,
+    housingConcern: item.housingConcern + adjustment.housingConcern,
+    cultureConcern: item.cultureConcern + adjustment.cultureConcern,
+    migrantOptimism: item.migrantOptimism + adjustment.migrantOptimism,
+    migrantConcern: item.migrantConcern + adjustment.migrantConcern,
+    businessInterest: item.businessInterest + adjustment.businessInterest,
   }))
 }
 
-export const getChannelBreakdown = ({ channel = 'All Channels', region = 'All Markets' } = {}) => {
-  const marketFactor = regionMultipliers[region] ?? 1
-  const weights = channelMentions[channel] ?? channelMentions['All Channels']
-  const base = [
-    { name: 'X / Twitter', value: 34, tone: 'red' },
-    { name: 'Instagram', value: 11, tone: 'amber' },
-    { name: 'LinkedIn', value: 7, tone: 'blue' },
-    { name: 'News / Media', value: 19, tone: 'blue' },
-    { name: 'Customer Support', value: 14, tone: 'amber' },
-    { name: 'Reddit', value: 9, tone: 'red' },
-    { name: 'Internal Chatter', value: 6, tone: 'green' },
-  ]
-
-  return base.map((item, index) => ({
-    ...item,
-    value: Number((item.value * weights[index] * marketFactor).toFixed(1)),
-  }))
-}
-
-export const marketSpread = [
-  { region: 'North America', intensity: 92, issueShare: '41%', cue: 'Retail recall and mainstream media traction', trend: '+18%' },
-  { region: 'South Asia', intensity: 83, issueShare: '22%', cue: 'Viral reposting and distributor concern', trend: '+12%' },
-  { region: 'Europe', intensity: 68, issueShare: '17%', cue: 'Consumer safety coverage still rising', trend: '+7%' },
-  { region: 'Middle East', intensity: 49, issueShare: '11%', cue: 'Localized commentary, limited earned media', trend: '+3%' },
-  { region: 'Latin America', intensity: 36, issueShare: '9%', cue: 'Watching sentiment spillover via influencers', trend: '+2%' },
+export const hotspotAnalysis = [
+  { city: 'Austin', inflow: 92, resistance: 68, housingStress: 84, narrative: 'High-value inflow, strongest affordability friction', tone: 'amber' },
+  { city: 'Dallas', inflow: 88, resistance: 42, housingStress: 56, narrative: 'Corporate relocation leader with manageable local pushback', tone: 'green' },
+  { city: 'Houston', inflow: 74, resistance: 36, housingStress: 49, narrative: 'Balanced reception with strong business absorption capacity', tone: 'green' },
+  { city: 'San Antonio', inflow: 58, resistance: 47, housingStress: 53, narrative: 'Growing interest with local identity concerns rising', tone: 'amber' },
 ]
 
 export const stakeholderImpact = [
-  { name: 'Customers', impact: 91, severity: 'Critical', summary: 'Refund demand, safety concern, trust erosion', tone: 'red', icon: Users },
-  { name: 'Employees', impact: 58, severity: 'Moderate', summary: 'Store teams need scripts and escalation guidance', tone: 'amber', icon: Building2 },
-  { name: 'Regulators', impact: 76, severity: 'High', summary: 'Recall and disclosure documentation under scrutiny', tone: 'red', icon: ShieldAlert },
-  { name: 'Investors', impact: 63, severity: 'High', summary: 'Questions on governance, forecast exposure, and response quality', tone: 'amber', icon: HandCoins },
-  { name: 'Media', impact: 72, severity: 'High', summary: 'Narrative still anchored on safety and transparency concerns', tone: 'red', icon: Globe2 },
-  { name: 'Partners / Vendors', impact: 47, severity: 'Moderate', summary: 'Retail coordination improving after recall protocol', tone: 'blue', icon: RadioTower },
-  { name: 'Local Communities', impact: 39, severity: 'Moderate', summary: 'Monitoring rumor spread around affected facilities', tone: 'green', icon: AlertTriangle },
+  { name: 'Local residents', impact: 62, sentiment: 'Mixed', severity: 'Moderate', summary: 'Supportive of growth, but focused on affordability and cultural continuity.', tone: 'amber', icon: Users },
+  { name: 'Migrating businesses', impact: 81, sentiment: 'Positive', severity: 'Low', summary: 'Responding to tax certainty, operating cost advantage, and expansion speed.', tone: 'green', icon: BriefcaseBusiness },
+  { name: 'HNIs', impact: 74, sentiment: 'Positive', severity: 'Low', summary: 'High interest in tax climate and lifestyle, but still watching community reception.', tone: 'green', icon: BadgeDollarSign },
+  { name: 'State government', impact: 77, sentiment: 'Confident', severity: 'Moderate', summary: 'Needs brand consistency while proving local quality-of-life protections.', tone: 'blue', icon: Landmark },
+  { name: 'Media', impact: 66, sentiment: 'Mixed', severity: 'Moderate', summary: 'Narrative split between economic magnetism and social pressure concerns.', tone: 'amber', icon: Newspaper },
+  { name: 'Real estate sector', impact: 71, sentiment: 'Positive', severity: 'Moderate', summary: 'Benefits from inflow but exposed to affordability and supply scrutiny.', tone: 'blue', icon: Building2 },
 ]
 
-export const issueDrivers = [
-  { driver: 'Product failure', value: 92 },
-  { driver: 'Misinformation', value: 74 },
-  { driver: 'Data / privacy issue', value: 14 },
-  { driver: 'Leadership backlash', value: 48 },
-  { driver: 'Service outage', value: 21 },
-  { driver: 'Supply chain issue', value: 57 },
-  { driver: 'Employee misconduct', value: 11 },
-  { driver: 'Ethical concern', value: 26 },
+export const positiveDrivers = [
+  { driver: 'Tax advantage', value: 91 },
+  { driver: 'Cost of living', value: 76 },
+  { driver: 'Remote work flexibility', value: 64 },
+  { driver: 'Business-friendly regulation', value: 82 },
+]
+
+export const negativeDrivers = [
+  { driver: 'Housing inflation fears', value: 79 },
+  { driver: 'Political concerns', value: 58 },
+  { driver: 'Cultural friction', value: 54 },
+  { driver: 'Infrastructure strain', value: 49 },
 ]
 
 export const riskMatrix = [
-  { name: 'Regulatory action', probability: 3, impact: 3, tone: 'red' },
-  { name: 'Customer churn', probability: 3, impact: 2, tone: 'amber' },
-  { name: 'Media escalation', probability: 2, impact: 3, tone: 'red' },
-  { name: 'Reputational decline', probability: 3, impact: 3, tone: 'red' },
-  { name: 'Boycott risk', probability: 2, impact: 2, tone: 'amber' },
-  { name: 'Revenue dip', probability: 2, impact: 2, tone: 'amber' },
-  { name: 'Talent dissatisfaction', probability: 1, impact: 2, tone: 'blue' },
-  { name: 'Competitor exploitation', probability: 2, impact: 1, tone: 'green' },
+  { name: 'Housing affordability crisis', probability: 3, impact: 3, tone: 'amber' },
+  { name: 'Anti-migrant sentiment', probability: 2, impact: 3, tone: 'amber' },
+  { name: 'Political backlash', probability: 2, impact: 2, tone: 'amber' },
+  { name: 'Social tension escalation', probability: 2, impact: 3, tone: 'red' },
+  { name: 'Infrastructure strain', probability: 2, impact: 2, tone: 'amber' },
+  { name: 'Narrative fragmentation', probability: 2, impact: 2, tone: 'blue' },
+  { name: 'Talent attraction slowdown', probability: 1, impact: 2, tone: 'blue' },
+  { name: 'Policy resistance at city level', probability: 2, impact: 1, tone: 'green' },
 ]
 
 export const responseTracker = [
-  { action: 'Holding statement issued', owner: 'Corporate Comms', deadline: 'Complete', status: 'Done', impact: 'Narrative control initiated' },
-  { action: 'Retail pull-through of affected lots', owner: 'Operations', deadline: 'Tonight 21:00', status: 'In Progress', impact: 'Consumer risk reduction' },
-  { action: 'Influencer myth-busting outreach', owner: 'Social Team', deadline: '19:30', status: 'In Progress', impact: 'Limit misinformation velocity' },
-  { action: 'CEO apology review and sign-off', owner: 'Executive Office', deadline: '20:15', status: 'Pending', impact: 'Restore accountability signal' },
-  { action: 'Refund policy launch', owner: 'CX Lead', deadline: 'Live', status: 'Done', impact: 'Visible customer remediation' },
-  { action: 'Root cause investigation update', owner: 'Quality & Legal', deadline: '22:00', status: 'At Risk', impact: 'Reduce regulatory exposure' },
-  { action: 'FAQ page and store script rollout', owner: 'Customer Care', deadline: 'Complete', status: 'Done', impact: 'Consistency across support channels' },
+  { action: 'Texas Advantage creator campaign', owner: 'Economic Development', deadline: 'Live', status: 'Done', impact: 'Boost relocation intent among founders and investors' },
+  { action: 'Local resident reassurance campaign', owner: 'Governor Communications', deadline: 'Next 72h', status: 'In Progress', impact: 'Reduce perceived zero-sum framing around migrants' },
+  { action: 'City-level housing mitigation briefings', owner: 'Housing Taskforce', deadline: 'Next 5 days', status: 'In Progress', impact: 'Contain affordability backlash in hotspot markets' },
+  { action: 'Influencer partnership rollout', owner: 'Digital Partnerships', deadline: 'Next 48h', status: 'Pending', impact: 'Normalize migration narrative through trusted local voices' },
+  { action: 'Business relocation case-study PR', owner: 'State PR Office', deadline: 'Complete', status: 'Done', impact: 'Strengthen economic credibility with proof-driven storytelling' },
+  { action: 'Community listening town halls', owner: 'Regional Affairs', deadline: 'Next 2 weeks', status: 'At Risk', impact: 'Build local trust and surface resistance early' },
 ]
 
 export const messagingEffectiveness = [
-  { metric: 'Official response reach', score: 78, benchmark: 'Broad', tone: 'blue' },
-  { metric: 'Clarification acceptance', score: 54, benchmark: 'Mixed', tone: 'amber' },
-  { metric: 'Misinformation reduction', score: 46, benchmark: 'Improving', tone: 'amber' },
-  { metric: 'Engagement on official post', score: 81, benchmark: 'Strong', tone: 'green' },
-  { metric: 'Customer reassurance level', score: 49, benchmark: 'Fragile', tone: 'red' },
+  { metric: 'Campaign engagement rate', score: 74, benchmark: 'Strong', tone: 'green' },
+  { metric: 'Sentiment shift after messaging', score: 61, benchmark: 'Improving', tone: 'blue' },
+  { metric: 'Misinformation reduction', score: 52, benchmark: 'Moderate', tone: 'amber' },
+  { metric: 'Reach of Texas Advantage narrative', score: 83, benchmark: 'High', tone: 'green' },
+  { metric: 'Local reassurance effectiveness', score: 57, benchmark: 'Needs reinforcement', tone: 'amber' },
 ]
 
 export const scenarios = [
   {
     label: 'Best case',
-    probability: 0.22,
-    summary: 'Recall confidence rises, misinformation decays, sentiment stabilizes below peak within 24 hours.',
+    probability: 0.24,
+    summary: 'Texas sustains strong inflow, local concerns soften through housing and infrastructure reassurance, and the economic brand strengthens nationally.',
   },
   {
     label: 'Base case',
-    probability: 0.56,
-    summary: 'Coverage remains elevated but controllable while customer remediation and media briefings slow the decline.',
+    probability: 0.58,
+    summary: 'Growth remains solid, but city-specific resistance requires continuous messaging and visible mitigation to keep sentiment balanced.',
   },
   {
     label: 'Worst case',
-    probability: 0.22,
-    summary: 'Fresh claims or delayed executive response reignite outrage and trigger tougher regulatory attention.',
+    probability: 0.18,
+    summary: 'Housing and political backlash reshape the story from opportunity to social strain, slowing high-value migration and increasing policy friction.',
   },
 ]
 
 export const watchpoints = [
-  'Track whether negative share of voice stays below 30% by next briefing window.',
-  'Watch for regulator commentary or leaked retailer memos that extend the story cycle.',
-  'Assess whether customer support wait times rise above 55 minutes during refund surge.',
-  'Confirm myth-busting content is outpacing reposts from large creator accounts.',
+  'Track whether Austin resistance stays below 40% after housing reassurance content lands.',
+  'Watch for local media framing that migration benefits outsiders at residents’ expense.',
+  'Monitor if relocation inquiries remain strong after new affordability headlines.',
+  'Check whether community outreach improves resident sentiment in high-pressure districts.',
 ]
 
 export const recommendations = [
-  'Centralize all outward-facing narrative under one verified briefing cadence every 3 hours.',
-  'Put customer remediation ahead of brand defense and show visible compensation mechanisms.',
-  'Deploy a trained spokesperson with plain-language accountability messaging within the next hour.',
-  'Pause promotional content globally until sentiment and misinformation velocity both normalize.',
-  'Issue regulator-ready proof points on lot traceability, corrective action, and monitoring discipline.',
+  'Deploy targeted local messaging that frames migration as investment in Texas communities, not displacement of them.',
+  'Lead with economic storytelling for migrants and businesses, but pair it with visible commitments on housing and infrastructure.',
+  'Localize policy reassurance by city so hotspot communities see specific mitigation plans, not statewide abstractions.',
+  'Expand community outreach in Austin and San Antonio where social friction is outpacing statewide averages.',
+  'Use proof-led relocation stories that showcase jobs, philanthropy, and local economic spillover for existing residents.',
 ]
 
 export const narrativeThemes = {
   headlines: [
-    'Food safety response now defines brand trust trajectory',
-    'Commentators split between recall praise and transparency criticism',
-    'Retailers push for clearer guidance on affected inventory',
+    'Texas remains the preferred relocation story for capital and headquarters',
+    'Housing pressure is the main vulnerability in the migration narrative',
+    'Judges and media will notice whether growth is framed as shared benefit or cultural displacement',
   ],
-  risingKeywords: ['recall', 'contamination', 'refund', 'accountability', 'consumer safety', 'traceability', 'false rumor'],
+  risingKeywords: ['Texas Advantage', 'housing affordability', 'business relocation', 'community stability', 'tax climate', 'quality of life', 'local backlash'],
   concernClusters: [
-    'Product safety and family risk',
-    'Speed of apology',
-    'Retail shelf withdrawal consistency',
-    'Rumor amplification on creator accounts',
+    'Rent and affordability pressure',
+    'Political identity and culture fit',
+    'Infrastructure and congestion',
+    'Whether newcomers contribute visibly to communities',
   ],
   misinformationFlags: [
-    'False claim that all product lines are affected',
-    'Recycled video falsely linked to current lot numbers',
-    'Rumor that regulators ordered a full manufacturing shutdown',
+    'Claim that state incentives are only benefiting coastal elites',
+    'Narrative that local wages are broadly being displaced by inbound executives',
+    'False rumor that cities are removing local housing protections to accelerate migration',
   ],
 }
 
 export const footerBadges = [
-  { label: 'Active Monitoring', tone: 'blue' },
+  { label: 'Economic Positioning Active', tone: 'blue' },
   { label: 'Mock Data', tone: 'amber' },
-  { label: 'Crisis Phase: Containment', tone: 'red' },
+  { label: 'Public Sentiment Managed', tone: 'green' },
 ]
